@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animovie – SERIES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #020617;
+      font-size: 28px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 260px;
+      background: #020617;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      text-align: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.07);
+    }
+
+    .card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Animovie – Solo Leveling
+</header>
+
+<div class="container">
+
+  <!-- SOLO LEVELING S1 -->
+  <a href="solo-leveling-s1.html">
+    <div class="card">
+      <img src="SLA1.jpg" alt="Solo Leveling Season 1">
+      <h3>Solo Leveling – Season 1</h3>
+    </div>
+  </a>
+
+  <!-- SOLO LEVELING S2 -->
+  <a href="solo-leveling-s2.html">
+    <div class="card">
+      <img src="SLA2.jpg" alt="Solo Leveling Season 2">
+      <h3>Solo Leveling – Season 2</h3>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  © 2025 Animovie · All Rights Reserved
+</footer>
+
+</body>
+</html>
