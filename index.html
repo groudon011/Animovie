@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animovie – Watch Animated Movies Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Animovie is an anime streaming project where you can watch Solo Leveling, Chainsaw Man, One Piece and more animated movies and series online.">
+<meta name="keywords" content="Animovie, anime streaming, solo leveling, chainsaw man, anime movies, watch anime online">
+<meta name="author" content="Animovie">
+
+<meta property="og:title" content="Animovie – Watch Anime Movies Online">
+<meta property="og:description" content="Watch Solo Leveling, Chainsaw Man, One Piece and more anime on Animovie.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.jpg">
+<meta property="og:url" content="https://YOUR-SITE-LINK-HERE">
+
+<meta name="robots" content="index, follow">
+  
+<style>
+    body {
+      margin: 0;                                                                                                                                                             In this i want the chainsaw men movie after clicking on it i wanna open another html file 
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: #ffffff;
+    }
+
+     /* BACKGROUND VIDEO */
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* DARK OVERLAY (for readability) */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 23, 0.75);
+      z-index: -1;
+    }
+
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 30px;
+      background: #020617;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      min-height: 70px;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #38bdf8;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #cbd5f5;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      color: #cbd5f5;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 14px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background: #38bdf8;
+      color: #020617;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero button:hover {
+      background: #0ea5e9;
+    }
+
+    .section {
+      padding: 40px 30px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="bg-video.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+
+<header>
+  <div class="logo" style="display:flex;align-items:center;gap:10px;">
+    <img src="logo.jpg" alt="Animovie Logo" style="height:48px;width:48px;border-radius:50%;object-fit:cover;box-shadow:0 0 14px rgba(56,189,248,0.9);">
+    <span style="font-size:26px;font-weight:bold;color:#38bdf8;letter-spacing:1px;">Animovie</span>
+  </div>
+  <nav>
+    <input type="text" id="searchInput" placeholder="Search anime movies..." onkeyup="searchMovies()" style="padding:8px 12px;border-radius:20px;border:none;outline:none;">
+    <a href="#">Home</a>
+    <a href="Movies.html">Movies</a>
+    <a href="series.html">Series</a>
+    <a href="About.html">About</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Welcome to <span>Animovie</span></h1>
+  <p>Watch your favorite animated movies and series anytime, anywhere. High quality animation, smooth streaming, zero distraction.</p>
+  <button>Start Watching</button>
+</section>
+
+<section class="section">
+  <h2>Popular Animovies</h2>
+  <div class="cards" id="movieList">
+    <a href="solo-leveling-s1.html" style="text-decoration:none;color:inherit;">
+  <div class="card" data-title="Solo Leveling S-01">
+    <img src="SLA1.jpg" alt="Solo Leveling S-01">
+    <h3>Solo Leveling S-01</h3>
+  </div>
+</a>
+
+     <a href="One Piece- Stempede.html" style="text-decoration:none;color:inherit;">
+  <div class="card" data-title="One Piece The Stampede Film (Eng)">
+    <img src="stempede.jpg" alt="One Piece The Stampede Film Poster">
+    <h3>One Piece The Stampede Film (Eng)</h3>
+  </div>
+</a>
+
+    <a href="chainsaw-man.html" style="text-decoration:none;color:inherit;">
+  <div class="card" data-title="Chainsaw-man The Reze">
+    <img src="chainsaw-man-poster.jpg" alt="Chainsaw Man The Reze Poster">
+    <h3>Chainsaw-man The Reze</h3>
+  </div>
+</a>
+   <a href="Zootopia2.html" style="text-decoration:none;color:inherit;">
+  <div class="card" data-title="Zootopia 2 (English) 2025">
+    <img src="Zootopia 2 (English) 2025.jpeg" alt="Zootopia 2 (English) 2025 Poster">
+    <h3>Zootopia 2 (English) 2025</h3>
+  </div>
+</a>
+
+<a href="solo-leveling-s2.html" style="text-decoration:none;color:inherit;">
+  <div class="card" data-title="Solo Leveling S-02">
+    <img src="SLA2.jpg" alt="Solo Leveling S-02">
+    <h3>Solo Leveling S-02</h3>
+  </div>
+</a>
+<a href="monkey-king.html" style="text-decoration:none;color:inherit;">
+  <div class="card" data-title="The Monkey King Reborn (Dual) 2021">
+    <img src="monkey-king.jpg" alt="The Monkey King Reborn (Dual) 2021">
+    <h3>The Monkey King Reborn (Dual) 2021</h3>
+  </div>
+</a>
+
+
+      </div>
+    <div class="card">
+      <img src="coming soon.jpg" alt="Movie">
+      <h3>Animated Movie 2</h3>
+    </div>
+    <a href="Jujutsu Kaisen-2021_480p_BlueRay.html" style="text-decoration:none;color:inherit;">
+  <div class="card" data-title="Jujutsu Kaisen Zero_2021_480p Blue Ray">
+    <img src="Jujutsu-Kaisen-poster.jpg" alt="Jujutsu-Kaisen-poster">
+    <h3>Jujutsu Kaisen Zero_2021_480p Blue Ray</h3>
+  </div>
+</a>
+
+    <div class="card">
+      <img src="coming soon.jpg" alt="Movie">
+      <h3>Animated Movie 4</h3>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Animovie · All Rights Reserved
+</footer>
+
+<script>
+  function searchMovies() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const movies = document.querySelectorAll('#movieList .card');
+
+    movies.forEach(movie => {
+      const title = movie.getAttribute('data-title').toLowerCase();
+      movie.style.display = title.includes(input) ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
