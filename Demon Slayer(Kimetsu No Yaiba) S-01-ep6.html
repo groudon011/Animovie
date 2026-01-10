@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animovie Streaming</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .video-container {
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .controls a {
+            text-decoration: none;
+            padding: 12px 22px;
+            background: #38bdf8;
+            color: #020617;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .controls a.disabled {
+            background: #64748b;
+            pointer-events: none;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-container">
+    <h1>Demon Slayer(Kimetsu No Yaiba) S-01 – Episode 6</h1>
+
+    <iframe 
+        src="https://drive.google.com/file/d/1pwldJoibNxuKb6waz7Itl353l1rK0rnt/preview"
+        allow="autoplay"
+        allowfullscreen>
+    </iframe>
+
+       <div class="controls">
+        <a id="prevBtn">⏮ Previous</a>
+        <a id="nextBtn">Next ⏭</a>
+    </div>
+</div>
+
+<script>
+        const currentEp = 6;
+    const totalEpisodes = 26;
+
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    if (currentEp > 1) {
+        prevBtn.href = `Demon Slayer(Kimetsu No Yaiba) S-01-ep${currentEp - 1}.html`;
+    } else {
+        prevBtn.classList.add("disabled");
+    }
+
+    if (currentEp < totalEpisodes) {
+        nextBtn.href = `Demon Slayer(Kimetsu No Yaiba) S-01-ep${currentEp + 1}.html`;
+    } else {
+        nextBtn.classList.add("disabled");
+    }
+</script>
+
+</body>
+</html>
